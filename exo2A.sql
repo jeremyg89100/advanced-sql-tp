@@ -1,4 +1,4 @@
--- On crée tout d'abord une table employe qui va prendre en clé primaire employe_id,
+-- On crée tout d'abord une table employes qui va prendre en clé primaire employe_id,
 -- on y ajoute tout ce qui est lié à l'employé donc employe_nom, dept_nom
 -- Puis une table chef_projets avec chef_projet_id PK, chef_projet_nom, chef_projet_tel
 -- Une table projets qui contient projet_id PK, projet_nom, chef_projet_id (clé étrangère)

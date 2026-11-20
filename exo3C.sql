@@ -35,8 +35,8 @@
 --         par exemple PostgreSQL pour les sécuriser. Pour augmenter la capacité du serveur, 
 --         on peut commencer par une scalabilité verticale puis horizontale si le besoin se présente.
 --         Pour la structure il s'agira d'un tableau avec des colonnes fixes.
---         Pour la nature des accès il faudra s'assurer que ACID est bien respecté et faire des
---         requêtes SQL qui respectent bien la cohérence des données.
+--         Pour la nature des accès il faudra s'assurer que ACID est bien respecté 
+--         cela permet de bien respecter la cohérence des données.
 
 --     Suggestion d'itinéraires/amis commun à 3 degrés de séparation:
 --         Ici il vaut mieux utiliser Neo4j qui permet d'utiliser des graphes afin de

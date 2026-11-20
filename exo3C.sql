@@ -16,26 +16,24 @@
 --         Ici le choix parait plus libre. On pourrait choisir PA/EL pour la fluidité de 
 --         l'application tout en admettant qu'il puisse y avoir des erreurs ou bien choisir 
 --         PC/EC pour un temps de réaction plus long mais une fiabilité des solutions proposées.
---         Je pencherai tout de même pour le PC/EC pour la simple raison qu'il y a les suggestions
---         d'itinéraires et qu'il est mieux qu'elles prennent plus de temps mais qu'elles soient 
---         toute pertinente.
+--         Je pencherai tout de même pour le PA/EL pour la raison qu'il faut que les requêtes
+--         d'itinéraires puissent se faire le plus rapidement possible pour fluidifier l'expérience utilisateur.
 
 -- Cohérence / Scalabilité / Structure / Nature des accès:
 --     Suivi GPS: 
 --         Ici la cohérence n'est pas le plus gros défi, il faut
 --         surtout avoir une faible latence, on peut donc utiliser du noSQL avec
 --         DynamoDB ou Cassandra afin de pouvoir entrer un gros volume de données.
---         Ici il n'y aura pas de problème de scalabilité avec Cassandra qui sont des
---         colonnes larges ou DynamoDB qui sont simplement des clés valeurs.
---         Comme dit précédemment pour la structure il s'agira de simple clés valeurs.
---         Ici pour les données, il y aura juste à interroger la clé pour connaitre la valeur
---         qui y est attachée.
+--         Ici il faudra une scalabilité horizontale pour répondre au besoin des 10k
+--         requêtes par seconde.
+--         Comme dit précédemment pour la structure il s'agira de clés valeurs ou alors de colonnes larges.
+--         Ici pour les données, il faudra lire les données de position de la voiture de chaque utilisateur.
         
 
 --     Facturation bancaire des trajets:
 --         Ici on veut de la cohérence, on privilégie une base de données SQL comme 
 --         par exemple PostgreSQL pour les sécuriser. Pour augmenter la capacité du serveur, 
---         on peut simplement en prendre un plus gros ou alors en prendre plusieurs.
+--         on peut commencer par une scalabilité verticale puis horizontale si le besoin se présente.
 --         Pour la structure il s'agira d'un tableau avec des colonnes fixes.
 --         Pour la nature des accès il faudra s'assurer que ACID est bien respecté et faire des
 --         requêtes SQL qui respectent bien la cohérence des données.

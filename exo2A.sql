@@ -3,4 +3,4 @@
 -- Puis une table chef_projets avec chef_projet_id PK, chef_projet_nom, chef_projet_tel
 -- Une table projets qui contient projet_id PK, projet_nom, chef_projet_id (clé étrangère)
 -- Enfin une table affectation_projet avec en PK employe_id et projet_id. 
--- employe_id sera une FK tout comme projet_id qui va référencer 
+-- employe_id sera une FK tout comme projet_id qui va référencer leur table respective (employes et projets)

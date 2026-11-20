@@ -1,0 +1,7 @@
+-- Le rôle du WAL, par exemple lors d'une coupure de courant, est que les données
+-- restent cohérente. Un rollback s'effectue lorsqu'un problème survient et les 
+-- données qui ont été écrites reviennent à leur état initial. Cela permet 
+-- d'assurer l'intégrité des données, il est notamment utilisé pour les systèmes 
+-- de paiements ou bien en règle plus générale tout changement de données.
+-- Un REPEATABLE READ permet donc de garder la cohérence des données contrairement au
+-- READ COMMITED.

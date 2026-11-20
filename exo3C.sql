@@ -9,7 +9,7 @@
 --     Facturation bancaire des trajets:
 --         Ici il nous faut de la cohérence afin que les données soient toujours
 --         correctes, on ne veut pas que l'utilisateur paie plusieurs fois par
---         inadvertance ou pas erreur serveur. C'est pourquoi je choisirai 
+--         inadvertance ou par erreur serveur. C'est pourquoi je choisirai 
 --         le choix PC/EC. La priorité est à l'intégrité des données.
 
 --     Suggestion d'itinéraires/amis commun à 3 degrés de séparation:
